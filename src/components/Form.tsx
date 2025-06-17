@@ -1,4 +1,5 @@
 import { useState, type Dispatch } from "react"
+import { v4 } from "uuid"
 import { categories } from "../data/categories"
 import type { ActivityActions } from "../reducers/activity-reducer"
 import type { Activity } from "../types"
@@ -9,7 +10,8 @@ type FormProps = {
 
 const Form = ({dispatch} : FormProps) => {
 
-    const initialState = {
+    const initialState : Activity = {
+        id: v4(),
         category: 1,
         name: '',
         calories: 0
