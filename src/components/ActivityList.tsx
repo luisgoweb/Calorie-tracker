@@ -1,3 +1,4 @@
+import { PencilSquareIcon, XCircleIcon } from "@heroicons/react/24/outline"
 import type { Activity } from "../types"
 
 type ActivityListProps = {
@@ -17,8 +18,17 @@ const ActivityList = ({activities} : ActivityListProps) => {
                         <p className="text-2xl pt-5 font-bold">{activity.name}</p>
                         <p className="text-4xl pt-5 font-black text-lime-500">{activity.calories} {''} <span>calorías</span></p>
                     </div>
-                    <div>
-
+                    <div className="flex gap-5 items-center">
+                        <button>
+                            <PencilSquareIcon
+                            className="h-8 w-8 text-gray-800"
+                            />
+                        </button>
+                        <button>
+                            <XCircleIcon
+                            className="h-8 w-8 text-red-800"
+                            />
+                        </button>
                     </div>
                 </div>
             ))}
