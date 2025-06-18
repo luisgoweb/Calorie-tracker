@@ -37,6 +37,12 @@ function App() {
             </div>
         </section>
 
+        <section className="bg-gray-800 p-10">
+            <div className="max-w-4xl mx-auto" >
+
+            </div>
+        </section>
+
         <section className="max-w-4xl p-10 mx-auto">
             <ActivityList 
             activities={state.activities}
