@@ -1,11 +1,14 @@
 import { PencilSquareIcon, XCircleIcon } from "@heroicons/react/24/outline"
+import type { Dispatch } from "react"
+import type { ActivityActions } from "../reducers/activity-reducer"
 import type { Activity } from "../types"
 
 type ActivityListProps = {
     activities: Activity[]
+    dispatch: Dispatch<ActivityActions>
 }
 
-const ActivityList = ({activities} : ActivityListProps) => {
+const ActivityList = ({activities, dispatch} : ActivityListProps) => {
   return (
     <>
         <h2 className="text-4xl text-center text-slate-600 font-bold">Comida y Actividades</h2>
@@ -19,7 +22,9 @@ const ActivityList = ({activities} : ActivityListProps) => {
                         <p className="text-4xl pt-5 font-black text-lime-500">{activity.calories} {''} <span>calorías</span></p>
                     </div>
                     <div className="flex gap-5 items-center">
-                        <button>
+                        <button
+                        onClick={()=> dispatch({type: "activeId", payload: {id: activity.id}})}
+                        >
                             <PencilSquareIcon
                             className="h-8 w-8 text-gray-800"
                             />
