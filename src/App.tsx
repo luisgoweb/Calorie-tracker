@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from "react"
 import ActivityList from "./components/ActivityList"
+import CalorieTracker from "./components/CalorieTracker"
 import Form from "./components/Form"
 import { activityReducer, initialState } from "./reducers/activity-reducer"
 
@@ -39,7 +40,9 @@ function App() {
 
         <section className="bg-gray-800 p-10">
             <div className="max-w-4xl mx-auto" >
-
+                <CalorieTracker 
+                activities={state.activities}
+                />
             </div>
         </section>
 

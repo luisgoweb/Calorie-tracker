@@ -1,5 +1,11 @@
+import type { Activity } from "../types"
 
-const CalorieTracker = () => {
+
+type CalorieTrackerProps = {
+    activities: Activity[]
+}
+
+const CalorieTracker = ({activities}: CalorieTrackerProps) => {
   return (
     <div>
       
