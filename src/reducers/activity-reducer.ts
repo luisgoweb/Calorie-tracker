@@ -10,13 +10,13 @@ export type activityState = {
     activeId: Activity['id']
 }
 
-const getInitialState = ()=>{
+const localStorageActivity = () : Activity[] =>{
     const getStorage = localStorage.getItem('activities')
     return getStorage ? JSON.parse(getStorage) : []
 }
 
 export const initialState: activityState = {
-    activities: getInitialState(),
+    activities: localStorageActivity(),
     activeId: ''
 }
 
