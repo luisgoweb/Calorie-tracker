@@ -29,7 +29,9 @@ const ActivityList = ({activities, dispatch} : ActivityListProps) => {
                             className="h-8 w-8 text-gray-800"
                             />
                         </button>
-                        <button>
+                        <button 
+                        onClick={()=> dispatch({type: "delete-activity", payload: {id: activity.id}})}
+                        >
                             <XCircleIcon
                             className="h-8 w-8 text-red-800"
                             />
