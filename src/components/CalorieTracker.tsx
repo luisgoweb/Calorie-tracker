@@ -11,6 +11,7 @@ const CalorieTracker = ({activities}: CalorieTrackerProps) => {
 
     const calorieConsumed = useMemo(()=> activities.reduce((total,activity) => activity.category === 1 ? total + +activity.calories : total, 0) ,[activities])
     const calorieBurn = useMemo(()=> activities.reduce((total,activity) => activity.category === 2 ? total + +activity.calories : total, 0) ,[activities])
+    const netCalories = useMemo(()=> calorieConsumed - calorieBurn ,[activities])
   return (
     <>
         <h2 className="text-4xl text-white text-center font-black">Resumen de Calorías</h2> 
@@ -23,6 +24,11 @@ const CalorieTracker = ({activities}: CalorieTrackerProps) => {
             <CalorieDisplay 
             calories={calorieBurn}
             text="Ejercicio"
+            />
+
+            <CalorieDisplay 
+            calories={netCalories}
+            text="Diferencia"
             />
 
            
