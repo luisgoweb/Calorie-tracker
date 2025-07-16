@@ -1,20 +1,16 @@
 import { PencilSquareIcon, XCircleIcon } from "@heroicons/react/24/outline"
-import type { Dispatch } from "react"
-import type { ActivityActions } from "../reducers/activity-reducer"
-import type { Activity } from "../types"
+import { useActivity } from "../hooks/useActivity"
 
-type ActivityListProps = {
-    activities: Activity[]
-    dispatch: Dispatch<ActivityActions>
-}
 
-const ActivityList = ({activities, dispatch} : ActivityListProps) => {
+
+const ActivityList = () => {
+      const {state, dispatch} = useActivity()
   return (
     <>
         <h2 className="text-4xl text-center text-slate-600 font-bold">Comida y Actividades</h2>
-            {activities.length === 0 ? <p className="font-bold text-center mt-3">Aún no hay actividades...</p> :
+            {state.activities.length === 0 ? <p className="font-bold text-center mt-3">Aún no hay actividades...</p> :
             
-            activities.map( activity => (
+            state.activities.map( activity => (
                 <div key={activity.id} className="px-5 py-10 bg-white mt-5 flex justify-between shadow-md">
                     <div className="space-y-2 relative">
                         <p className={`absolute -top-8 -left-8 px-10 py-2 text-white font-bold uppercase ${activity.category === 1 ? "bg-lime-500" : "bg-orange-500"} `}>

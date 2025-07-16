@@ -1,15 +1,14 @@
-import { useEffect, useState, type Dispatch } from "react"
+import { useEffect, useState } from "react"
 import { v4 } from "uuid"
 import { categories } from "../data/categories"
-import type { ActivityActions, activityState } from "../reducers/activity-reducer"
+import { useActivity } from "../hooks/useActivity"
 import type { Activity } from "../types"
 
-type FormProps = {
-    dispatch: Dispatch<ActivityActions>
-    state: activityState
-}
 
-const Form = ({dispatch, state} : FormProps) => {
+
+const Form = () => {
+
+    const {state, dispatch} = useActivity()
 
     const initialState : Activity = {
         id: v4(),
