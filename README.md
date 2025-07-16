@@ -1,65 +1,40 @@
 📊 CalorieTracker - Tu Contador Inteligente de Calorías y Actividad
+(¡No olvides reemplazar este placeholder con una captura de pantalla atractiva de tu aplicación funcionando! Sube tu imagen a Imgur y pega el enlace aquí.)
 
-¡Bienvenido a CalorieTracker, tu compañero personal para llevar un control detallado de tu ingesta calórica y tus actividades físicas! Este proyecto es una aplicación web intuitiva que te permite registrar tanto las comidas consumidas como los ejercicios realizados, calculando automáticamente tu balance calórico diario.
-
-Desarrollada con React, TypeScript y Tailwind CSS, esta aplicación permite manejar el estado de aplicaciones complejas de forma eficiente y aplicar buenas prácticas de desarrollo front-end. En este proyecto personal profundizo en patrones de gestión de estado avanzados como useReducer y he consolidado mi experiencia con herramientas modernas.
+¡Bienvenido a CalorieTracker! Esta es una aplicación web intuitiva para registrar y controlar tu ingesta calórica y actividades físicas, calculando tu balance diario. Desarrollada con React, TypeScript y Tailwind CSS, demuestra mi habilidad en la gestión avanzada del estado y la construcción de interfaces robustas.
 
 🚀 ¡Explora el Proyecto!
-Aunque este proyecto aún no está desplegado en un entorno público, te invito a explorar el código y, si lo deseas, a ejecutarlo localmente para ver todas sus funcionalidades.
+¡La aplicación está en vivo y lista para ser probada! Puedes ver el CalorieTracker funcionando en Vercel aquí:
 
-(Opcional: Si en el futuro lo despliegas en Netlify/Vercel, añade aquí el enlace:
-👉 CalorieTracker en Netlify/Vercel 👈)
+👉 https://calorie-tracker-nine-phi.vercel.app/ 👈
 
-✨ Características Principales (MVP - Minimum Viable Product)
-Esta primera versión del CalorieTracker se enfoca en proporcionar una experiencia completa de registro y seguimiento de calorías, utilizando características avanzadas de React:
+✨ Características Principales y Habilidades Demostradas
+Este proyecto destaca mi comprensión y aplicación de patrones modernos de desarrollo Front-end:
 
-📝 Formulario Dinámico de Registro:
+🌍 Gestión de Estado Global con useContext y useReducer: La lógica central de la aplicación y el estado de las actividades se manejan globalmente a través de un Context API, cuyo estado es administrado por un useReducer. Toda esta implementación está encapsulada en un Custom Hook, promoviendo la reutilización y la legibilidad del código.
 
-Un formulario intuitivo con tres campos: Categoría (select entre Comida/Ejercicio), Actividad (texto) y Calorías (numérico).
-El texto del botón Guardar cambia dinámicamente según la categoría seleccionada (ej. "Guardar Comida" o "Guardar Ejercicio").
+📝 Formulario Dinámico de Registro: Permite añadir actividades (comidas o ejercicios) con campos adaptativos y un botón de guardar contextual.
 
-➕➖ Gestión de Actividades:
+➕➖ Gestión Completa de Actividades: Las actividades registradas pueden ser editadas o eliminadas individualmente, con actualizaciones en tiempo real.
 
-Registra nuevas actividades (comidas o ejercicios) con sus respectivas calorías.
-Edición y Eliminación: Cada actividad registrada puede ser editada o eliminada individualmente, con actualizaciones en tiempo real.
+📊 Resumen de Calorías en Tiempo Real: Muestra las calorías consumidas, quemadas y la diferencia neta, con cálculos optimizados mediante useMemo para un rendimiento eficiente.
 
-📊 Resumen de Calorías en Tiempo Real:
+💾 Persistencia de Datos: Todos los datos se guardan en localStorage para asegurar que la información no se pierda entre sesiones.
 
-Una sección de estadísticas que muestra las Calorías Consumidas, Calorías Quemadas (ejercicio) y la Diferencia neta.
-Optimización con useMemo: Los cálculos de las estadísticas están optimizados con useMemo para evitar recálculos innecesarios y asegurar un rendimiento óptimo.
+🔄 Reiniciar Aplicación: Un botón dedicado para limpiar todos los registros y empezar de nuevo.
 
-🔄 Reiniciar Aplicación: Un botón "Reiniciar App" para borrar todas las actividades y el estado, permitiendo empezar de nuevo.
+🛡️ Tipado Estricto con TypeScript: Garantiza la robustez del código y previene errores en tiempo de desarrollo.
 
-💾 Persistencia de Datos con Local Storage: Todas las actividades registradas persisten en el localStorage del navegador, asegurando que tus datos no se pierdan al cerrar o recargar la página.
-
-💡 Gestión de Estado con useReducer: La lógica central de manejo del estado de las actividades (añadir, editar, eliminar, reiniciar) está centralizada y gestionada eficientemente utilizando el hook useReducer. Esto demuestra un enfoque avanzado en el manejo de estado, facilitando la escalabilidad y mantenibilidad.
-
-🛠️ Custom Hooks: Utilización de custom hooks para encapsular lógica relacionada, promoviendo la reutilización de código y manteniendo los componentes limpios y enfocados en la UI.
-
-🛡️ Tipado Estricto con TypeScript: Todo el proyecto está completamente tipado con TypeScript, lo que mejora la legibilidad, la robustez del código y previene errores comunes de JavaScript en tiempo de desarrollo.
-
-🎨 Estilizado con Tailwind CSS: Interfaz de usuario moderna y responsiva construida con el framework de CSS de utilidad, lo que permite un desarrollo rápido y un diseño consistente.
+🎨 Estilizado Profesional con Tailwind CSS: Interfaz de usuario limpia, moderna y responsiva.
 
 ⚙️ Tecnologías Utilizadas
-
 React: Biblioteca de JavaScript para construir interfaces de usuario.
+
 TypeScript: Superset de JavaScript que añade tipado estático.
+
 Tailwind CSS: Framework CSS de utilidad para un estilizado rápido y responsivo.
+
 Vite: Herramienta de construcción rápida y ligera para proyectos React.
-
-💻 Cómo Ejecutar el Proyecto Localmente
-Si quieres explorar el código o probar la aplicación, sigue estos pasos:
-
-Clona el repositorio:
-
-npm install
-
-npm run dev
-
-El proyecto se abrirá automáticamente en tu navegador en http://localhost:5173 (o un puerto similar).
-
-💡 Próximas Funcionalidades (Roadmap)
-Este proyecto está diseñado para crecer. En futuras versiones, planeo agregar las siguientes funcionalidades para mejorar la experiencia del usuario y expandir sus capacidades:
 
 🧑‍💻 Conéctate Conmigo
 
